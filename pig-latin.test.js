@@ -15,7 +15,10 @@ describe('Pig latin function', () => {
   test('Checks if a string starts with a vowel. Append the word "way"', () => {
     expect(pigLatin('all')).toBe('allway');
   });
-  test('Checks if a string starts with a consonant. Append the word "ay"', () => {
-    expect(pigLatin('all')).toBe('allway');
+  test('Checks if a string starts with a consonant. Remove consonant and any subsequent consonants until a vowel is reached. Append consonants and then append the word "ay"', () => {
+    expect(pigLatin('sheffield')).toBe('effieldshay');
+  });
+  test('Checks if a multiple words with a consonant. Remove consonant and any subsequent consonants until a vowel is reached. Append consonants and then append the word "ay"', () => {
+    expect(pigLatin('keep on coding')).toBe('eepkay onway odingcay');
   });
 });
