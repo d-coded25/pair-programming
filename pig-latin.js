@@ -1,12 +1,14 @@
 function pigLatin(str) {
   const idx = [];
 
+  // get indices of spaces:
   for (let i = 0; i < str.length; i++) {
     if (str[i] === ' ') {
       idx.push(i);
     }
   }
 
+  // split words at space
   const words = str.split(' ');
 
   // checks if the string is empty;
